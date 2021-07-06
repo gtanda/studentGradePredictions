@@ -12,13 +12,15 @@ The chosen dataset was the [student performance dataset](https://www.kaggle.com/
 
 **Fig 1**. Features Chosen through linearSVR
 
-![Features Chosen Through linearSVR](C:\Users\Govin\Desktop\COMP\2021\COMP_3710\ML\StudentGrades\images\feature_chosen_frame.png)
+![chosen_features](https://user-images.githubusercontent.com/37893024/124529704-fe4ec800-ddbf-11eb-9c44-49ce1d2d6789.png)
+
 
 The chosen features include data such as student age, family relationship, daily alcohol consumption, if the students receive extra support at school, if the student wants to pursue higher education, travel time to school, and if their parents work at home, as teacher or in other services, the reason they chose their school and of course their grades from previous tests in their class. The goal is to use these features to predict a student&#39;s future grade. To make this project possible, Jupyter labs was used to allow creating an easily documentable notebook that others can view to see the process of how this project was executed.
 
 **Fig 2.** First 10 rows of dataset
 
-![](RackMultipart20210706-4-8zhvfl_html_fdc8f99ca7ce6ac4.png)
+![head](https://user-images.githubusercontent.com/37893024/124529678-f1ca6f80-ddbf-11eb-9c47-445ebb53e4e5.png)
+
 
 **Method(s)**
 
@@ -28,36 +30,40 @@ To choose the feature which would be used for the predictions for the linear reg
 
 **Figure 3.** Dataframe of chosen features
 
-![](RackMultipart20210706-4-8zhvfl_html_31bb8a0fc4b27834.png)
+![feature_chosen_frame](https://user-images.githubusercontent.com/37893024/124530027-95b41b00-ddc0-11eb-8a9e-4be06edd4d4c.png)
+
 
 **Experiments/Simulations**
 
 To get some form of baseline before data was cleaned and features were selected, the numerical data was used with train, test, split, then fit and predicted with the linear regression model. Train, test, split was used with a random\_state value to ensure the same values are split to help see results of model, also made usage of train, test, split to see results made randomly without random\_state to see how different results would be to make sure that the random\_state value wasn&#39;t simply including results that were either over or underfit.
 
-![](RackMultipart20210706-4-8zhvfl_html_cca205ca495a9add.png) **Figure 4.** R2 Score and results before usage of categorical data and feature selection, no random\_state parameter to make use of same data
+![no_random_state_before](https://user-images.githubusercontent.com/37893024/124530054-a4023700-ddc0-11eb-8e9e-5d8b48903f66.png)
+ **Figure 4.** R2 Score and results before usage of categorical data and feature selection, no random\_state parameter to make use of same data
 
-![](RackMultipart20210706-4-8zhvfl_html_a5bccd36b3e2510.png) **Figure 5.** R2 Score and results after usage of categorical data and feature selection, no random\_state
+![no_random_state_after](https://user-images.githubusercontent.com/37893024/124530084-b2505300-ddc0-11eb-8927-c8f66c5327c1.png)
+ **Figure 5.** R2 Score and results after usage of categorical data and feature selection, no random\_state
 
 **Steps to run project**
 
 1. Drag the grade\_ipynb prediction file and the student.csv file into a folder together
 2. Open up your preferred cli and go to the folder containing the grade\_prediction.ipynb file and students.csv file, and run the command &quot;jupyter lab grade\_prediction.ipynb&quot;
 
-![](RackMultipart20210706-4-8zhvfl_html_82f8e8e2132d1a61.png)
+![steps_to_run](https://user-images.githubusercontent.com/37893024/124530135-c8f6aa00-ddc0-11eb-8f90-5ff7f73c8ec4.png)
+
 
 1. After this step has occurred you should be redirected to the Jupyter labs notebook where you can select the &quot;Run&quot; dropdown and choose &quot;Run All Cells&quot; to get the output
 
-![](RackMultipart20210706-4-8zhvfl_html_12d769e1a5ed5346.png)
+![run_steps](https://user-images.githubusercontent.com/37893024/124530155-d1e77b80-ddc0-11eb-9df1-5b3a7a389b1f.png)
 
 **Results**
 
 **Figure 6.** R2 model score before usage of categorical data and feature selection, and output of first 10 students in dataset
 
-![](RackMultipart20210706-4-8zhvfl_html_34eb7720084a32cd.png)
+![data_before_clean](https://user-images.githubusercontent.com/37893024/124530211-ed528680-ddc0-11eb-9084-01dd1a2c3b77.png)
 
 **Figure 7.** R2 Model score after swapping categorical data to numerical data and usage of feature selection, output of first 10 students
 
-![](RackMultipart20210706-4-8zhvfl_html_d657998f7a8b8d4c.png)
+![data_after_clean](https://user-images.githubusercontent.com/37893024/124530191-e3c91e80-ddc0-11eb-8077-ef19cab2ec52.png)
 
 From the results we can clearly see that the model using numerical and categeorical data is producing better results but just barely, when random\_state parameter is used to make sure the same data is used for each model they produce nearly identical results with Figure 7 showing that the usage of categorical data and feature selection made a very small increase in how high the R2 score was at 87% vs the model that just made usage of the numerical data which produced results that reached 86%.
 
@@ -67,11 +73,11 @@ As stated in the results section the metric that I used to help evaluate how wel
 
 **Figure 8.** No random\_state parameter, only numerical values used
 
-![](RackMultipart20210706-4-8zhvfl_html_4c98a35e350a4883.png)
+![no_random_state_results](https://user-images.githubusercontent.com/37893024/124530232-fb080c00-ddc0-11eb-98bc-347d63419991.png)
 
 **Figure 9.** No random\_state parameter, numerical and categorical data
 
-![](RackMultipart20210706-4-8zhvfl_html_e9ea543e9d8222e7.png)
+![no_random_state_catnumdata](https://user-images.githubusercontent.com/37893024/124530258-065b3780-ddc1-11eb-9ee5-4f68c5ee9434.png)
 
 **Discussion and Conclusion**
 
